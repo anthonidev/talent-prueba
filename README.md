@@ -14,6 +14,18 @@ Una aplicación full-stack para la Factorización de Matrices QR, que consta de 
 - [Make](https://www.gnu.org/software/make/) (opcional, para Linux/Mac)
 - PowerShell (opcional, para Windows)
 
+## Configuración
+
+1.  Copia el archivo de ejemplo de variables de entorno:
+
+    ```bash
+    cp .env.example .env
+    # En Windows PowerShell:
+    # Copy-Item .env.example .env
+    ```
+
+2.  (Opcional) Edita el archivo `.env` si necesitas cambiar puertos o secretos.
+
 ## Inicio Rápido
 
 ### Usando Docker Compose (Recomendado)
