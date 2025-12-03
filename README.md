@@ -1,75 +1,50 @@
 # Desafío de Factorización QR de Interseguro
 
-Una aplicación full-stack para la Factorización de Matrices QR, que consta de una API en Go para el cálculo, una API en Node.js para estadísticas y un Frontend en Next.js para la interacción del usuario.
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 
-## Estructura del Proyecto
+Aplicación full-stack para la Factorización de Matrices QR.
 
-- **apps/api-go**: Servicio en Go (Fiber) para la lógica de descomposición QR.
-- **apps/api-nodejs**: Servicio en Node.js (NestJS) para el cálculo de estadísticas y autenticación JWT.
-- **apps/frontend**: Frontend en Next.js (React) con una interfaz moderna y tema oscuro.
+## Estructura
 
-## Requisitos Previos
-
-- [Docker](https://www.docker.com/) y Docker Compose
-- [Make](https://www.gnu.org/software/make/) (opcional, para Linux/Mac)
-- PowerShell (opcional, para Windows)
-
-## Configuración
-
-1.  Copia el archivo de ejemplo de variables de entorno:
-
-    ```bash
-    cp .env.example .env
-    # En Windows PowerShell:
-    # Copy-Item .env.example .env
-    ```
-
-2.  (Opcional) Edita el archivo `.env` si necesitas cambiar puertos o secretos.
+- **`apps/api-go`**: Lógica de cálculo QR (Go/Fiber).
+- **`apps/api-nodejs`**: Estadísticas y autenticación (Node.js/NestJS).
+- **`apps/frontend`**: Interfaz de usuario (Next.js/React).
 
 ## Inicio Rápido
 
-### Usando Docker Compose (Recomendado)
+### 1. Configuración
 
-Para construir e iniciar todos los servicios:
+Copia las variables de entorno:
+
+```bash
+cp .env.example .env
+# Windows PowerShell: Copy-Item .env.example .env
+```
+
+### 2. Ejecución
+
+**Docker Compose (Recomendado):**
 
 ```bash
 docker-compose up --build
 ```
 
-Los servicios estarán disponibles en:
+**Scripts de Utilidad:**
 
-- **Frontend**: http://localhost:3001
-- **Go API**: http://localhost:8080
-- **Node.js API**: http://localhost:3000
+| Comando                                     | Descripción       |
+| :------------------------------------------ | :---------------- |
+| `make start` / `./start.ps1 -Command start` | Iniciar servicios |
+| `make stop` / `./start.ps1 -Command stop`   | Detener servicios |
+| `make build` / `./start.ps1 -Command build` | Reconstruir       |
+| `make test` / `./start.ps1 -Command test`   | Ejecutar tests    |
 
-### Usando Make (Linux/Mac)
+### 3. Acceso
 
-```bash
-make start         # Iniciar todos los servicios
-make stop          # Detener todos los servicios
-make build         # Reconstruir servicios
-make logs          # Ver registros (logs)
-make test          # Ejecutar todos los tests
-make test-go       # Tests de API Go
-make test-node     # Tests de API Node.js
-make test-frontend # Tests de Frontend
-make lint          # Linting del Frontend
-```
-
-### Usando PowerShell (Windows)
-
-```powershell
-./start.ps1 -Command start   # Iniciar todos los servicios
-./start.ps1 -Command stop    # Detener todos los servicios
-./start.ps1 -Command build   # Reconstruir servicios
-./start.ps1 -Command logs    # Ver registros (logs)
-./start.ps1 -Command test    # Ejecutar todos los tests
-```
-
-## Desarrollo
-
-Si deseas ejecutar los servicios individualmente sin Docker, consulta el `README.md` en cada subdirectorio:
-
-- [apps/api-go/README.md](apps/api-go/README.md)
-- [apps/api-nodejs/README.md](apps/api-nodejs/README.md)
-- [apps/frontend/README.md](apps/frontend/README.md)
+- **Frontend**: [http://localhost:3001](http://localhost:3001)
+- **Go API**: [http://localhost:8080](http://localhost:8080)
+- **Node.js API**: [http://localhost:3000](http://localhost:3000)
