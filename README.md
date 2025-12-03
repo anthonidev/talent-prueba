@@ -28,13 +28,15 @@ cp .env.example .env
 
 ### 2. Ejecución
 
-**Docker Compose (Recomendado):**
+Se recomienda utilizar los scripts de utilidad (`make` o `start.ps1`) para gestionar el ciclo de vida de la aplicación de manera sencilla.
+
+**Docker Compose (Manual):**
 
 ```bash
 docker-compose up --build
 ```
 
-**Scripts de Utilidad:**
+**Scripts de Utilidad (Recomendado):**
 
 | Comando                                     | Descripción       |
 | :------------------------------------------ | :---------------- |
@@ -43,8 +45,8 @@ docker-compose up --build
 | `make build` / `./start.ps1 -Command build` | Reconstruir       |
 | `make test` / `./start.ps1 -Command test`   | Ejecutar tests    |
 
-### 3. Acceso
+### 3. Acceso y Documentación
 
-- **Frontend**: [http://localhost:3001](http://localhost:3001)
-- **Go API**: [http://localhost:8080](http://localhost:8080)
-- **Node.js API**: [http://localhost:3000](http://localhost:3000)
+- **Frontend**: [http://localhost:3001](http://localhost:3001) - [Ver README](apps/frontend/README.md)
+- **Go API**: [http://localhost:8080](http://localhost:8080) - [Ver README](apps/api-go/README.md)
+- **Node.js API**: [http://localhost:3000](http://localhost:3000) - [Ver README](apps/api-nodejs/README.md)
