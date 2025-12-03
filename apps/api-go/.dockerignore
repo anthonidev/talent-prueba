@@ -1,0 +1,8 @@
+# Ignorar archivos innecesarios en el build de Docker
+.env
+.env.example
+*.md
+.git
+.gitignore
+*.log
+tmp/
